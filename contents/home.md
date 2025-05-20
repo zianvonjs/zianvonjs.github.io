@@ -1,20 +1,14 @@
 [![zianvonjs](https://img.shields.io/badge/zianvonjs-github-blue?logo=github)](https://github.com/zianvonjs)
 
-I'm currently pursuing a Master's degree in XX at the Department of XX, XX University, XX.
+I'm a Bachelor graduated from HaiNan University in 2021.
 
 #### Email  
 <code>1044823461@qq.com</code>  
 <code>maozian991525@gmail.com</code>
 
 #### Education  
-**XX University**, Master of XX (XX – XX)  
-• GPA: XX/XX  
-
-**XX University**, Exchange student <br>  
-• As a XX, represented my college as an outstanding student for a XX exchange program.  
-
-**XX University**, Honours Bachelor of XX (XX – XX)  
-• GPA: XX/XX (top XX%)  
+**HaiNan University**, Bachelor of Internet Of Things Engineering (2017 – 2021)  
+• GPA: 3.3/4.0   
 
 #### Research Interests  
 XX, XX, XX, XX.

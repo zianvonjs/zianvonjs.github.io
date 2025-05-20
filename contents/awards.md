@@ -1,3 +1,3 @@
-- 校级一等奖学金, 2022.  
-
-- Outstanding Graduation Thesis, XXX University, 2023. 
+- 校级特等奖学金, 2018.  
+  校级一等奖学金，三好学生，优秀学生干部，2019.
+  校级二等奖学金，2020.
