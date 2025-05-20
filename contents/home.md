@@ -5,6 +5,8 @@ I'm currently pursuing a Master's degree in XX at the Department of XX, XX Unive
 #### Email  
 <code>XX@XX.XX</code>  
 <code>XX@XX.XX</code>
+<code>1044823461@qq.com</code>  
+<code>maozian991525@gmail.com</code>
 
 #### Education  
 **XX University**, Master of XX (XX – XX)  
