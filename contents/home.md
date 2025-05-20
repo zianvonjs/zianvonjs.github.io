@@ -1,10 +1,8 @@
-[![XX](https://img.shields.io/badge/XX-github-blue?logo=github)](https://github.com/XX)
+[![zianvonjs](https://img.shields.io/badge/zianvonjs-github-blue?logo=github)](https://github.com/zianvonjs)
 
 I'm currently pursuing a Master's degree in XX at the Department of XX, XX University, XX.
 
 #### Email  
-<code>XX@XX.XX</code>  
-<code>XX@XX.XX</code>
 <code>1044823461@qq.com</code>  
 <code>maozian991525@gmail.com</code>
 
