@@ -12,9 +12,6 @@ function renderConfig() {
             Object.keys(yml).forEach(key => {
                 try {
                     let value = yml[key];
-                    if (value !== undefined) {
-                        document.getElementById(key).innerHTML = value;
-                    }
                     if (typeof value === 'object' && value[currentLang]) {
                         value = value[currentLang];
                     }
