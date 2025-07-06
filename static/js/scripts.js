@@ -32,6 +32,13 @@ function setLang(lang) {
     if (window.setLang) setLang(lang);
 }
 
+function setConfigLang(lang) {
+    currentLang = lang;
+    renderConfig();
+    // 调用导航栏多语言
+    if (window.setNavLang) setNavLang(lang);
+}
+
 // 页面加载时
 window.addEventListener('DOMContentLoaded', event => {
 

@@ -23,7 +23,7 @@ const lang = {
   }
 };
 
-function setLang(language) {
+function setNavLang(language) {
   const navMap = [
     ["a[href='#home']", "home"],
     ["a[href='#job-intention']", "job_intention"],
