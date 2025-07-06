@@ -1,6 +1,7 @@
 const content_dir = 'contents/'
 const config_file = 'config.yml'
 const section_names = ['home', 'awards', 'experience', 'publications'];
+let currentLang = 'zh'; // 默认中文，可根据实际切换
 
 
 window.addEventListener('DOMContentLoaded', event => {
@@ -35,7 +36,12 @@ window.addEventListener('DOMContentLoaded', event => {
             const yml = jsyaml.load(text);
             Object.keys(yml).forEach(key => {
                 try {
-                    document.getElementById(key).innerHTML = yml[key];
+                    let value = yml[key];
+                    // 如果是对象且有当前语言，则取对应语言
+                    if (typeof value === 'object' && value[currentLang]) {
+                        value = value[currentLang];
+                    }
+                    document.getElementById(key).innerHTML = value;
                 } catch {
                     console.log("Unknown id and value: " + key + "," + yml[key].toString())
                 }
@@ -60,4 +66,4 @@ window.addEventListener('DOMContentLoaded', event => {
             .catch(error => console.log(error));
     })
 
-}); 
+});
