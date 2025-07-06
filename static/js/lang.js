@@ -2,6 +2,7 @@ const lang = {
   en: {
     home: "HOME",
     job_intention: "JOB INTENTION",
+    education: "EDUCATION",
     awards: "AWARDS",
     experience: "EXPERIENCE",
     techstack: "TECH STACK",
@@ -12,6 +13,7 @@ const lang = {
   zh: {
     home: "首页",
     job_intention: "求职意向",
+    education: "教育经历",
     awards: "奖惩情况",
     experience: "工作经历",
     techstack: "技术栈",
@@ -25,6 +27,7 @@ function setLang(language) {
   const navMap = [
     ["a[href='#home']", "home"],
     ["a[href='#job-intention']", "job_intention"],
+    ["a[href='#education']", "education"],
     ["a[href='#awards']", "awards"],
     ["a[href='#experience']", "experience"],
     ["a[href='#techstack']", "techstack"],
