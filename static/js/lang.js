@@ -1,6 +1,7 @@
 const lang = {
   en: {
     home: "HOME",
+    job_intention: "JOB INTENTION",
     awards: "AWARDS",
     experience: "EXPERIENCE",
     techstack: "TECH STACK",
@@ -10,6 +11,7 @@ const lang = {
   },
   zh: {
     home: "首页",
+    job_intention: "求职意向",
     awards: "奖惩情况",
     experience: "工作经历",
     techstack: "技术栈",
@@ -21,6 +23,7 @@ const lang = {
 
 function setLang(language) {
   document.querySelector("a[href='#home']").innerText = lang[language].home;
+  document.querySelector("a[href='#job-intention']").innerText = lang[language].job_intention ;
   document.querySelector("a[href='#awards']").innerText = lang[language].awards;
   document.querySelector("a[href='#experience']").innerText = lang[language].experience;
   document.querySelector("a[href='#techstack']").innerText = lang[language].techstack;

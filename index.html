@@ -30,14 +30,11 @@
     <link type="text/css" href="static/css/main.css" rel="stylesheet" />
     <!-- 引入 Bootstrap 的核心 JavaScript 文件，用于支持页面上的 Bootstrap 组件（如导航栏、模态框、下拉菜单等）的交互功能-->
     <script type="text/javascript" src="static/js/bootstrap.bundle.min.js"></script>
-
-    <!-- For Compatability -->
+    <!-- ES6 兼容性补丁，使老旧浏览器也能支持 ES6 新特性，提升网页兼容性。 -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-
-    <!-- Markdown -->
+    <!-- 让网页支持将 Markdown 文本渲染为 HTML -->
     <script type="text/javascript" src="static/js/marked.min.js"></script>
-
-    <!-- Mathematics -->
+    <!-- 网页中用用LaTeX 语法写数学公式，并且有较好的兼容性和错误提示 -->
     <script>
         // See https://docs.mathjax.org/en/latest/index.html for more details.
         MathJax = {
@@ -68,12 +65,10 @@
             }
         };
     </script>
-    <script type="text/javascript" id="MathJax-script"
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <!-- 引入 MathJax 库，用于渲染 LaTeX 数学公式 -->    
     <script type="text/javascript" id="MathJax-script" async
         src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
-    <!-- Core JS-->
+    <!-- 加载了网站的主 JS 脚本和一个用于处理 YAML 数据的第三方库。-->
     <script type="text/javascript" src="static/js/scripts.js"></script>
     <script type="text/javascript" src="static/js/js-yaml.min.js"></script>
     <!--语言-->
@@ -82,9 +77,7 @@
     // 默认加载中文
     setLang('zh');
     </script>
-
 </head>
-
 <body id="page-top">
     <!-- 导航栏-->
     <nav class="header navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
@@ -107,7 +100,10 @@
                         <a class="nav-link me-lg-3" href="#home">主页</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#awards">奖项</a>
+                        <a class="nav-link me-lg-3" href="#job-intention">求职意向</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-lg-3" href="#awards">奖惩情况</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link me-lg-3" href="#experience">工作经历</a>
@@ -151,6 +147,23 @@
         </div>
     </section>
     <!-- 主页 -->
+    <!-- 求职意向 -->
+    <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="job-intention">
+        <div class="container px-5">
+            <header>
+                <h2 id="job-intention-subtitle"><i class="bi bi-briefcase"></i> 求职意向</h2>
+            </header>
+            <div class="main-body" id="job-intention-md">
+                <ul>
+                    <li>目标岗位：数据开发工程师 / BI工程师 / ETL工程师 / 报表工程师</li>
+                    <li>期望城市：南京 / 上海 / 杭州 / 宁波</li>
+                    <li>到岗时间：随时</li>
+                    <li>薪资期望: 10-15K</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- 求职意向 -->
     <!-- 奖惩情况 -->
     <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="awards">
         <div class="container px-5">
