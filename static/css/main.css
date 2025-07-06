@@ -108,5 +108,22 @@ section .main-body{
         margin: 0;
     }
 }
+.lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
 
+.lang-switch button {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.lang-switch button:hover {
+    background-color: #3948d2;
+    color: white;
+}
 
