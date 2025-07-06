@@ -31,8 +31,9 @@ function setLang(language) {
     ["a[href='#publications']", "publications"]
   ];
   navMap.forEach(([selector, key]) => {
-    const el = document.querySelector(selector);
-    if (el) el.innerText = lang[language][key];
+    document.querySelectorAll(selector).forEach(el => {
+      el.innerText = lang[language][key];
+    });
   });
   const github = document.getElementById("github-link");
   if (github) github.innerText = lang[language].github;
