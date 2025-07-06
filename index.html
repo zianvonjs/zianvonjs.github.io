@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--主页入口-->
-<html lang="zh-CN"> 
+<html lang="zh-en"> 
 <head>
     <meta charset="utf-8" />
     <!--页面响应式布局设置页面在移动端的显示方式-->
@@ -8,20 +8,6 @@
     <!--给搜索引擎和社交媒体提供页面简要描述-->
     <meta name="description" content="zianvonjs 的个人主页，展示项目、学习成果与履历。" />
     <meta name="author" content="zianvonjs" />
-
-    <!-- Open Graph for Facebook, WeChat, LinkedIn 等 -->
-    <meta property="og:title" content="zianvonjs 的个人主页" />
-    <meta property="og:description" content="展示项目、学习记录与研究成果。" />
-    <meta property="og:image" content="https://zianvonjs.github.io/static/assets/img/photo.png" />
-    <meta property="og:url" content="https://zianvonjs.github.io/" />
-    <meta property="og:type" content="website" />
-
-    <!-- Twitter Card（社交平台预览卡片）-->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="zianvonjs 的个人主页" />
-    <meta name="twitter:description" content="欢迎访问我的个人主页！这里记录了我的项目、笔记与成长经历。" />
-    <meta name="twitter:image" content="https://zianvonjs.github.io/static/assets/img/photo.png" />
-
 
     <title id="title"></title>
     <!-- Icon -->
@@ -95,8 +81,13 @@
 </head>
 
 <body id="page-top">
-    <!-- Navigation-->
+    <!-- 导航栏-->
     <nav class="header navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
+        <!-- 中英文切换 -->
+        <div class="ms-3">
+            <button onclick="setLang('zh')">中文</button>
+            <button onclick="setLang('en')">EN</button>
+        </div>
         <div class="container px-5">
             <a id="page-top-title" class="navbar-brand fw-bold" href="#page-top"></a>
             <!-- <a href="#page-top"><img src="static/assets/img/CUMT_LOGO.svg" style="width: 11rem;"></a> -->
