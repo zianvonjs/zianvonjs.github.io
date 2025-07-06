@@ -3,6 +3,7 @@ const lang = {
     home: "HOME",
     awards: "AWARDS",
     experience: "EXPERIENCE",
+    techstack: "TECH STACK",
     publications: "PUBLICATIONS",
     github: "GitHub",
     license: "License"
