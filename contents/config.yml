@@ -1,5 +1,15 @@
-title: zianvonjs的个人主页
-page-top-title: zianvonjs
-top-section-bg-text: Carpe Diem.把握当下.
-home-subtitle: zianvonjs&ensp;|&ensp;zianmao
-copyright-text: '&copy; zianvonjs 2023-2025. All Rights Reserved.'
+title:
+  zh: zianvonjs的个人主页
+  en: zianvonjs's Homepage
+page-top-title:
+  zh: zianvonjs
+  en: zianvonjs
+top-section-bg-text:
+  zh: Carpe Diem.把握当下.
+  en: Carpe Diem. Seize the day.
+home-subtitle:
+  zh: zianvonjs | zianmao
+  en: zianvonjs | zianmao
+copyright-text:
+  zh: '&copy; zianvonjs 2023-2025. 保留所有权利。'
+  en: '&copy; zianvonjs 2023-2025. All Rights Reserved.'
