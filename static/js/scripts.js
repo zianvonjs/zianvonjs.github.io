@@ -25,13 +25,6 @@ function renderConfig() {
 }
 
 // 语言切换函数
-function setLang(lang) {
-    currentLang = lang;
-    renderConfig();
-    // 如果有导航栏多语言，也在这里调用 setLang（如你已有的 lang.js）
-    if (window.setLang) setLang(lang);
-}
-
 function setConfigLang(lang) {
     currentLang = lang;
     renderConfig();
