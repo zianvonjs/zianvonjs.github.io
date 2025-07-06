@@ -1,9 +1,38 @@
 const content_dir = 'contents/'
 const config_file = 'config.yml'
 const section_names = ['home', 'awards', 'experience', 'publications'];
-let currentLang = 'zh'; // 默认中文，可根据实际切换
+let currentLang = 'zh'; // 默认中文
 
 
+function renderConfig() {
+    fetch(content_dir + config_file)
+        .then(response => response.text())
+        .then(text => {
+            const yml = jsyaml.load(text);
+            Object.keys(yml).forEach(key => {
+                try {
+                    let value = yml[key];
+                    if (typeof value === 'object' && value[currentLang]) {
+                        value = value[currentLang];
+                    }
+                    document.getElementById(key).innerHTML = value;
+                } catch {
+                    // 忽略没有对应id的项
+                }
+            })
+        })
+        .catch(error => console.log(error));
+}
+
+// 语言切换函数
+function setLang(lang) {
+    currentLang = lang;
+    renderConfig();
+    // 如果有导航栏多语言，也在这里调用 setLang（如你已有的 lang.js）
+    if (window.setLang) setLang(lang);
+}
+
+// 页面加载时
 window.addEventListener('DOMContentLoaded', event => {
 
     // Activate Bootstrap scrollspy on the main nav element
@@ -29,26 +58,7 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 
-    // Yaml
-    fetch(content_dir + config_file)
-        .then(response => response.text())
-        .then(text => {
-            const yml = jsyaml.load(text);
-            Object.keys(yml).forEach(key => {
-                try {
-                    let value = yml[key];
-                    // 如果是对象且有当前语言，则取对应语言
-                    if (typeof value === 'object' && value[currentLang]) {
-                        value = value[currentLang];
-                    }
-                    document.getElementById(key).innerHTML = value;
-                } catch {
-                    console.log("Unknown id and value: " + key + "," + yml[key].toString())
-                }
-
-            })
-        })
-        .catch(error => console.log(error));
+    renderConfig();
 
 
     // Marked
