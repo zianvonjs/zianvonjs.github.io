@@ -1,14 +1,6 @@
 [![zianvonjs](https://img.shields.io/badge/zianvonjs-github-blue?logo=github)](https://github.com/zianvonjs)
+欢迎来到我的主页！Welcome to my homepage!
 
-I'm a Bachelor graduated from HaiNan University in 2021.
-
-#### Email  
+#### 联系方式How to contact me:
 <code>1044823461@qq.com</code>  
 <code>maozian991525@gmail.com</code>
-
-#### Education  
-**HaiNan University**, Bachelor of Internet Of Things Engineering (2017 – 2021)  
-• GPA: 3.3/4.0   
-
-#### Research Interests  
-XX, XX, XX, XX.
