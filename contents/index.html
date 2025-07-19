@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<!--主页入口-->
+<html lang="zh-en"> 
+<head>
+    <meta charset="utf-8" />
+    <!--页面响应式布局设置页面在移动端的显示方式-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!--给搜索引擎和社交媒体提供页面简要描述-->
+    <meta name="description" content="zianvonjs 的个人主页，展示项目、学习成果与履历。" />
+    <!--作者-->
+    <meta name="author" content="zianvonjs" />
+    <!--浏览器标签页网页标题-->>
+    <title id="title"></title>
+    <!-- 网站标签页图标 -->
+    <link rel="icon" type="image/x-icon" href="static/assets/favicon.ico" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- 三种Google 字体-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap"
+        rel="stylesheet" />
+    <!-- css文件-->
+    <!--引入 Bootstrap 样式、主题颜色、自定义变量-->
+    <link type="text/css" href="static/css/styles.css" rel="stylesheet" />
+    <!--用于你的个性化设计：如头像、导航栏位置、字体、间距等自定义规则-->
+    <link type="text/css" href="static/css/main.css" rel="stylesheet" />
+    <!-- 引入 Bootstrap 的核心 JavaScript 文件，用于支持页面上的 Bootstrap 组件（如导航栏、模态框、下拉菜单等）的交互功能-->
+    <script type="text/javascript" src="static/js/bootstrap.bundle.min.js"></script>
+    <!-- ES6 兼容性补丁，使老旧浏览器也能支持 ES6 新特性，提升网页兼容性。 -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <!-- 让网页支持将 Markdown 文本渲染为 HTML -->
+    <script type="text/javascript" src="static/js/marked.min.js"></script>
+    <!-- 网页中用用LaTeX 语法写数学公式，并且有较好的兼容性和错误提示 -->
+    <script>
+        // See https://docs.mathjax.org/en/latest/index.html for more details.
+        MathJax = {
+            tex: {
+                packages: {},              // extensions to use
+                inlineMath: [              // start/end delimiter pairs for in-line math
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ],
+                displayMath: [             // start/end delimiter pairs for display math
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ],
+                processEscapes: false,      // use \$ to produce a literal dollar sign
+                processEnvironments: true, // process \begin{xxx}...\end{xxx} outside math mode
+                processRefs: true,         // process \ref{...} outside of math mode
+                digits: /^(?:[0-9]+(?:\{,\}[0-9]{3})*(?:\.[0-9]*)?|\.[0-9]+)/,    // pattern for recognizing numbers
+                tags: 'all',              // or 'ams' or 'all'
+                tagSide: 'right',          // side for \tag macros
+                tagIndent: '0.8em',        // amount to indent tags
+                useLabelIds: true,         // use label name rather than tag for ids
+                maxMacros: 10000,          // maximum number of macro substitutions per expression
+                maxBuffer: 5 * 1024,       // maximum size for the internal TeX string (5K)
+                // baseURL:                   // URL for use with links to tags (when there is a <base> tag in effect)
+                // (document.getElementsByTagName('base').length === 0) ? '' : String(document.location).replace(/#.*$/, ''),
+                formatError:               // function called when TeX syntax errors occur
+                    (jax, err) => jax.formatError(err)
+            }
+        };
+    </script>
+    <!-- 引入 MathJax 库，用于渲染 LaTeX 数学公式 -->    
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- 加载了网站的主 JS 脚本和一个用于处理 YAML 数据的第三方库。-->
+    <script type="text/javascript" src="static/js/scripts.js"></script>
+    <script type="text/javascript" src="static/js/js-yaml.min.js"></script>
+    <!--语言-->
+    <script src="static/js/lang.js"></script>
+    <script>
+    // 默认加载中文
+    setLang('zh');
+    </script>
+</head>
+<body id="page-top">
+    <!-- 导航栏-->
+    <nav class="header navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
+        <!-- 中英文切换 -->
+        <div class="ms-3">
+            <button onclick="setConfigLang('zh')">中文</button>
+            <button onclick="setConfigLang('en')">EN</button>
+        </div>
+        <div class="container px-5">
+            <a id="page-top-title" class="navbar-brand fw-bold" href="#page-top"></a>
+            <!-- <a href="#page-top"><img src="static/assets/img/CUMT_LOGO.svg" style="width: 11rem;"></a> -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                MENU
+                <i class="bi-list"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link me-lg-3" href="#home">主页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-lg-3" href="#job-intention">求职意向</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-lg-3" href="#education">教育经历</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-lg-3" href="#awards">奖惩情况</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-lg-3" href="#experience">工作经历</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-lg-3" href="#techstack">技术栈</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-lg-3" href="#publications">发表论文</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- 页面顶部大图区域 -->
+    <section class="top-section" style="background-image: url('static/assets/img/background.jpeg');">
+        <div class="top-section-content">
+            <div class="container px-5">
+                <h2 id="top-section-bg-text" class="text-white display-3 lh-1 font-alt"></h2>
+            </div>
+        </div>
+    </section>
+    <!-- 页面顶部大图区域 -->
+    <!-- 个人头像区域 -->
+    <div class="container px-5">
+        <div id="avatar">
+            <img class="shadow" src="static/assets/img/photo.png">
+        </div>
+    </div>
+    <!-- 个人头像区域 -->
+    <!-- 主页 -->
+    <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="home">
+        <div class="container px-5">
+            <header>
+                <h2 id="home-subtitle"> </h2>
+                <!-- <span class="bi bi-list"></span> -->
+            </header>
+            <div class="main-body" id="home-md"></div>
+        </div>
+    </section>
+    <!-- 主页 -->
+    <!-- 求职意向 -->
+    <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="job-intention">
+        <div class="container px-5">
+            <header>
+                <h2 id="job-intention-subtitle"><i class="bi bi-briefcase"></i> 求职意向</h2>
+            </header>
+            <div class="main-body" id="job-intention-md">
+                <ul>
+                    <li>目标岗位：数据开发工程师 / BI工程师 / ETL工程师 / 报表工程师</li>
+                    <li>期望城市：南京 / 上海 / 杭州 / 宁波</li>
+                    <li>到岗时间：随时</li>
+                    <li>薪资期望: 10-15K</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- 求职意向 -->
+    <!-- 教育经历 -->
+    <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="education">
+        <div class="container px-5">
+            <header>
+                <h2 id="education-subtitle"><i class="bi bi-mortarboard"></i> 教育经历</h2>
+            </header>
+            <div class="main-body" id="education-md">
+                <ul>
+                    <li><strong>海南大学</strong>211工程大学 ，物联网工程 本科（2017-2021），GPA: 3.3/4.0</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- 教育经历 -->
+    <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="awards">
+        <div class="container px-5">
+            <header>
+                <h2 id="awards-subtitle"><i class="bi bi-award-fill"></i>奖惩情况 </h2>
+            </header>
+            <div class="main-body" id="awards-md"></div>
+
+        </div>
+    </section>
+    <!-- 奖惩情况 -->
+    <!-- 工作经历 -->
+    <section class="bg-gradient-primary-to-secondary-dark mt5 md5" id="experience">
+        <div class="container px-5">
+            <header>
+                <h2 id="experience-subtitle"><i class="bi bi-briefcase-fill"></i> 工作经历 </h2>
+            </header>
+            <div class="main-body" id="experience-md"></div>
+        </div>
+    </section>
+    <!-- 工作经历 -->
+    <!-- 技术栈 -->
+    <section class="bg-gradient-primary-to-secondary-gray mt5 md5" id="techstack">
+        <div class="container px-5">
+            <header>
+                <h2 id="techstack-subtitle"><i class="bi bi-tools"></i> 技术栈</h2>
+            </header>
+            <div class="main-body" id="techstack-md">
+                <ul class="list-inline">
+                    <li class="list-inline-item text-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" width="40"><br>SQL
+                    </li>
+                    <li class="list-inline-item text-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" alt="Oracle" width="40"><br>Oracle
+                    </li>
+                    <li class="list-inline-item text-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hadoop/hadoop-original.svg" alt="Hadoop" width="40"><br>Hadoop
+                    </li>
+                    <li class="list-inline-item text-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python3" width="40"><br>Python3
+                    </li>
+                    <li class="list-inline-item text-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" width="40"><br>HTML
+                    </li>
+                    <li class="list-inline-item text-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" width="40"><br>CSS
+                    </li>
+                    <li class="list-inline-item text-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="40"><br>JavaScript
+                    </li>
+                    <li class="list-inline-item text-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" width="40"><br>Linux
+                    </li>
+                    <li class="list-inline-item text-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Shell" width="40"><br>Shell
+                    </li>
+                    <li class="list-inline-item text-center">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/apachehive.svg" alt="Apache Hive" width="40"><br>Apache Hive
+                    </li>
+                    <li>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqoop/sqoop-original.svg" alt="sqoop" width="40"><br>Apache Sqoop
+                    </li>
+                    <li>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/datax/datax-original.svg" alt="datax" width="40"><br>datax
+                    </li>
+                    <li>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azkaban/azkaban-original.svg" alt="azkaban" width="40"><br>azkaban
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- 技术栈 -->                    
+    <!-- 发表论文 -->
+    <section class="bg-gradient-primary-to-secondary-gray mt5 md5" id="publications">
+        <div class="container px-5">
+            <header>
+                <h2 id="publications-subtitle"><i class="bi bi-file-text-fill"></i>&nbsp;发表论文</h2>
+            </header>
+            <div class="main-body" id="publications-md"></div>
+
+        </div>
+    </section>
+    <!-- 发表论文  -->
+    <!-- 版权信息、联系信息-->
+    <footer class="bg-bottom text-center py-5">
+        <div class="container px-5">
+            <div class="text-white-50 small">
+                <div id="copyright-text" class="mb-2"></div>
+                <a id="github-link" href="https://github.com/senli1073">Github</a>
+                <span class="mx-1">&middot;</span>
+                <a id="license-link"
+                    href="https://github.com/senli1073/senli1073.github.io/blob/main/LICENSE">License</a>
+            </div>
+        </div>
+    </footer>
+    <!-- 版权信息、联系信息-->
+</body>
+</html>
